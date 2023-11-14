@@ -10,8 +10,6 @@ export class ButtonNav extends LitElement {
     @property({ type: String }) icon: TypeIcons = 'default';
     @property({ type: String }) name: String = 'default';
 
-
-
     static styles = [
         css`
 
@@ -20,12 +18,14 @@ export class ButtonNav extends LitElement {
                 display: flex;
                 justify-content: center;
                 font-size: 24px;
+                cursor: pointer;
             }
 
             .button::before{
                 content: attr(data-name) " ";
                 text-transform: capitalize;
                 padding: 8px 16px;
+                width: max-content;
                 background-color: red;
                 display: none;
                 position: absolute;
@@ -73,10 +73,6 @@ export class ButtonNav extends LitElement {
                 font-size: 14px;
             }
 
-            .circle:hover{
-                cursor: pointer;
-            }
-
             .rect{
                 border-radius: 8px;
                 padding: 16px 44px;
@@ -89,12 +85,34 @@ export class ButtonNav extends LitElement {
             .rect.active{
                 border-bottom: 2px solid #0866ff;
             }
+
+            .variant-circle{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 8px;
+            }
+            .variant-circle:hover{
+                background-color: #4d4e4f;
+            }
         `
     ];
 
 
 
     render() {
+        if (this.type === 'variant-circle') {
+            return html`
+            <div class="button variant-circle" data-name="${this.name}" >
+                ${this.count > 0 ? html`<div class="notification">${this.count}</div>` : ''}
+                ${unsafeHTML(getIconByName(this.icon))}
+            </div>
+            `;
+        }
         return html`
         <div class="button ${this.type === "circle" ? "circle" : "rect"}" data-name="${this.name}" >
             ${this.count > 0 ? html`<div class="notification">${this.count}</div>` : ''}

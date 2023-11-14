@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js'
 import { Header, HeaderType } from '../mocks/navigation';
+import { User, UserType } from '../mocks/user';
 
 
 @customElement('nav-bar')
@@ -8,6 +9,7 @@ export class NavBar extends LitElement {
 
     @property({ type: Array }) navigation: HeaderType['navigation'];
     @property({ type: Array }) info: HeaderType['info'];
+    @property({ type: Object }) user: UserType = User;
 
     constructor() {
         super();
@@ -17,7 +19,7 @@ export class NavBar extends LitElement {
 
     render() {
         return html`
-            <div class="header-container">
+            <header class="header-container">
                 <div class="search-bar">
                     <avatar-circle width="55px" height="55px" src="https://www.quinneysbush.co.nz/wp-content/uploads/2021/04/cropped-Facebook-logo.png"></avatar-circle>
                     <custom-input type="search" placeholder="Search Facebook" class="search-input"></custom-input>
@@ -35,15 +37,17 @@ export class NavBar extends LitElement {
                     ${this.info.map(item => html`
                         <button-nav count="${item.count ? item.count : 0}" icon="${item.icon}"></button-nav>
                     `)}
-                    <avatar-circle src="https://i.pravatar.cc/150?img=3"></avatar-circle>
+                    <avatar-circle src="${this.user.photo}"></avatar-circle>
                 </div>
-            </div>
+            </header>
         `;
     }
 
     static styles = [
         css`
            .header-container {
+                /* position: fixed; */
+                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
