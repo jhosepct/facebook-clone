@@ -8,6 +8,7 @@ export class ButtonNav extends LitElement {
     @property({ type: Number }) count = 0;
     @property({ type: String }) type = 'circle';
     @property({ type: String }) icon: TypeIcons = 'default';
+    @property({ type: String }) name: String = 'default';
 
 
 
@@ -95,7 +96,7 @@ export class ButtonNav extends LitElement {
 
     render() {
         return html`
-        <div class="button ${this.type === "circle" ? "circle" : "rect"}" data-name="${this.icon}" >
+        <div class="button ${this.type === "circle" ? "circle" : "rect"}" data-name="${this.name}" >
             ${this.count > 0 ? html`<div class="notification">${this.count}</div>` : ''}
             ${unsafeHTML(getIconByName(this.icon))}
         </div>
