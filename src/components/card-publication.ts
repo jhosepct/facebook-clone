@@ -115,7 +115,7 @@ export class CardPublication extends LitElement {
             }
 
             .card-footer .footer-controls span{
-                font-size: 18px;
+                font-size: 16px;
                 color: #8e8e8e;
             }
         `

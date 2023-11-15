@@ -21,7 +21,7 @@ export class NavBar extends LitElement {
         return html`
             <header class="header-container">
                 <div class="search-bar">
-                    <avatar-circle width="55px" height="55px" src="https://www.quinneysbush.co.nz/wp-content/uploads/2021/04/cropped-Facebook-logo.png"></avatar-circle>
+                    <avatar-circle width="50px" height="50px" src="https://www.quinneysbush.co.nz/wp-content/uploads/2021/04/cropped-Facebook-logo.png"></avatar-circle>
                     <custom-input type="search" placeholder="Search Facebook" class="search-input"></custom-input>
                 </div>
                 <nav class="navigation">
@@ -37,7 +37,7 @@ export class NavBar extends LitElement {
                     ${this.info.map(item => html`
                         <button-nav count="${item.count ? item.count : 0}" icon="${item.icon}"></button-nav>
                     `)}
-                    <avatar-circle src="${this.user.photo}"></avatar-circle>
+                    <avatar-circle width="50px" height="50px" src="${this.user.photo}"></avatar-circle>
                 </div>
             </header>
         `;
