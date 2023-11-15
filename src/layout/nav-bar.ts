@@ -37,7 +37,7 @@ export class NavBar extends LitElement {
                     ${this.info.map(item => html`
                         <button-nav count="${item.count ? item.count : 0}" icon="${item.icon}"></button-nav>
                     `)}
-                    <avatar-circle src="${this.user.photo}"></avatar-circle>
+                    <avatar-circle width="50px" height="50px" src="${this.user.photo}"></avatar-circle>
                 </div>
             </header>
         `;
