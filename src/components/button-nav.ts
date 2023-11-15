@@ -9,6 +9,8 @@ export class ButtonNav extends LitElement {
     @property({ type: String }) type = 'circle';
     @property({ type: String }) icon: TypeIcons = 'default';
     @property({ type: String }) name: String = 'default';
+    @property({ type: String }) width = '40px';
+    @property({ type: String }) height = '40px';
 
     static styles = [
         css`
@@ -107,7 +109,7 @@ export class ButtonNav extends LitElement {
     render() {
         if (this.type === 'variant-circle') {
             return html`
-            <div class="button variant-circle" data-name="${this.name}" >
+            <div class="button variant-circle" data-name="${this.name}" style="width: ${this.width}; height: ${this.height}">
                 ${this.count > 0 ? html`<div class="notification">${this.count}</div>` : ''}
                 ${unsafeHTML(getIconByName(this.icon))}
             </div>
