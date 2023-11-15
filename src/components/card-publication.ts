@@ -66,7 +66,7 @@ export class CardPublication extends LitElement {
 
             .card-contain .card-media iframe{
                 width:100%;
-                min-height: 382px;
+                min-height: 307px;
             }
 
             .card-contain .card-media img{
