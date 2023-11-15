@@ -5,15 +5,16 @@ const routes: Route[] = [
     {
         path: '/',
         component: 'lit-app',
-        children: [
-            {
-                path: 'about',
-                component: 'lit-about',
-                action: async () => {
-                    await import('./about/about');
-                },
-            },
-        ],
+        action: async () => {
+            await import('./app');
+        },
+    },
+    {
+        path: '/user',
+        component: 'lit-user',
+        action: async () => {
+            await import('./user/user');
+        },
     },
 ];
 
