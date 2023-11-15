@@ -47,7 +47,7 @@ export class NavBar extends LitElement {
         css`
            .header-container {
                 /* position: fixed; */
-                width: 100%;
+                /* width: 100%; */
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
