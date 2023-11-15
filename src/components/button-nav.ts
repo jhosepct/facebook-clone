@@ -19,7 +19,7 @@ export class ButtonNav extends LitElement {
                 position: relative;
                 display: flex;
                 justify-content: center;
-                font-size: 24px;
+                font-size: 20px;
                 cursor: pointer;
             }
 
@@ -72,7 +72,7 @@ export class ButtonNav extends LitElement {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 14px;
+                font-size: 12px;
             }
 
             .rect{

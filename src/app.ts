@@ -67,7 +67,7 @@ export class App extends LitElement {
     }
 
     .section-contacts .header h3{
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600;
     }
     .section-contacts .contacts{

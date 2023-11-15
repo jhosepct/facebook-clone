@@ -64,6 +64,10 @@ export class CardPublication extends LitElement {
                 grid-template-columns: repeat(auto-fill, minmax( 100px, 860px));
             }
 
+            .card-contain .card-media iframe{
+                width:100%;
+                min-height: 307px;
+            }
 
             .card-contain .card-media img{
                 width:100%;
@@ -143,7 +147,7 @@ export class CardPublication extends LitElement {
                                 ${media.type === 'img' ? html`
                                     <img src="${media.src}" alt="">
                                 ` : html`
-                                <iframe src=${media.src} width="680" height="382" style="border:none;overflow:hidden" scrolling="no" frameborder="0"  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                <iframe src=${media.src} style="border:none;overflow:hidden" scrolling="no" frameborder="0"  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                 `}
                             </div>
                         `)}
