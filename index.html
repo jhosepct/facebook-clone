@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook</title>
     <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/layout/nav-bar.ts"></script>
     <script type="module" src="/src/components/button-nav.ts"></script>
-    <script type="module" src="/src/components/nav-bar.ts"></script>
     <script type="module" src="/src/components/avatar-circle.ts"></script>
+    <script type="module" src="/src/components/custom-input.ts"></script>
+    <script type="module" src="/src/components/card-publication.ts"></script>
   </head>
   <body>
-    <div id="outlet"></div>
+    <nav-bar></nav-bar>
+    <main>
+      <div id="outlet"></div>
+    </main>
     <script type="module" src="./src/index.ts"></script>
   </body>
 </html>
