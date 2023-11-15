@@ -22,7 +22,7 @@ export const Header: HeaderType = {
         {
             name: 'Home',
             icon: 'home',
-            url: '#'
+            url: '/'
         },
         {
             name: 'Videos',
