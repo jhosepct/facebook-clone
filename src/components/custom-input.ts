@@ -48,7 +48,7 @@ export class CustomInput extends LitElement {
                 border: none;
                 background-color: transparent;
                 color: white;
-                font-size: 20px;
+                font-size: 16px;
             }
             .search-input input:focus{
                 outline: none;

@@ -89,7 +89,7 @@ export class App extends LitElement {
     }
 
     .card span{
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600;
     }
   `;
