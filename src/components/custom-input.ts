@@ -41,14 +41,14 @@ export class CustomInput extends LitElement {
                 align-items: center;
                 border-radius: 32px;
                 border: none;
-                padding: 12px ;
+                padding: 12px 12px 8px;
                 background-color: #3a3b3c;
             }
             .search-input input{
                 border: none;
                 background-color: transparent;
                 color: white;
-                font-size: 20px;
+                font-size: 16px;
             }
             .search-input input:focus{
                 outline: none;

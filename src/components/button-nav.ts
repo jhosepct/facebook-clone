@@ -54,7 +54,7 @@ export class ButtonNav extends LitElement {
                 justify-content: center;
                 align-items: center;
                 color: white;
-                padding: 8px;
+                padding: 4px;
             }
 
             .circle:hover{
@@ -76,7 +76,7 @@ export class ButtonNav extends LitElement {
             }
 
             .rect{
-                border-radius: 8px;
+                                border-radius: 8px;
                 padding: 16px 44px;
             }
 
